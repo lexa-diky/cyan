@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(":kotlin")
+    implementation project(":kotlin") { this. }
     implementation 'com.android.application:com.android.application.gradle.plugin:8.2.0-alpha08'
     implementation 'org.jetbrains.kotlin.android:org.jetbrains.kotlin.android.gradle.plugin:1.8.21'
     implementation 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21'
@@ -34,7 +34,7 @@ publishing {
         maven(MavenPublication) {
             groupId "com.github.lexadiky.cyan"
             artifactId "android"
-            version "1.0"
+            version "1.0-SNAPSHOT"
             from components.java
         }
     }
