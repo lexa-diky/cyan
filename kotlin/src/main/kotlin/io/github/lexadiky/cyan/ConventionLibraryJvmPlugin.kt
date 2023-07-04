@@ -1,5 +1,6 @@
 package io.github.lexadiky.cyan
 
+import io.github.lexadiky.cyan.mixin.TestMixin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -15,6 +16,8 @@ class ConventionLibraryJvmPlugin : Plugin<Project> {
         target.extensions.configure<KotlinProjectExtension> {
             jvmToolchain(resolveJvmToolchainVersion(target))
         }
+
+        TestMixin.apply(target, false)
     }
 
     private fun resolveJvmToolchainVersion(target: Project): Int {
