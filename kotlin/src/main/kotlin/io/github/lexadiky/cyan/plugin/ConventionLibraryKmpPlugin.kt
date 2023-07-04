@@ -1,6 +1,6 @@
 package io.github.lexadiky.cyan.plugin
 
-import io.github.lexadiky.cyan.Settings
+import io.github.lexadiky.cyan.KotlinSettings
 import io.github.lexadiky.cyan.mixin.TestMixin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -15,7 +15,7 @@ class ConventionLibraryKmpPlugin : Plugin<Project> {
 
         target.extensions.configure<KotlinMultiplatformExtension> {
             jvm {
-                jvmToolchain(Settings.jvmToolchainVersion(target))
+                jvmToolchain(KotlinSettings.jvmToolchainVersion(target))
                 withJava()
                 testRuns.named("test") {
                     executionTask.configure {

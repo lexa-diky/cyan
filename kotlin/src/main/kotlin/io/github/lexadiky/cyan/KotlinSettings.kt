@@ -3,7 +3,7 @@ package io.github.lexadiky.cyan
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.extra
 
-internal object Settings {
+internal object KotlinSettings {
 
     fun jvmToolchainVersion(target: Project): Int {
         return target.extra["cyan.kotlin.jvm-toolchain"].toString().toInt()
