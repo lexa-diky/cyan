@@ -20,7 +20,6 @@ gradlePlugin {
         create("cyan-convention-library-jvm") {
             id = "cyan.convention.library.jvm"
             implementationClass = "io.github.lexadiky.cyan.ConventionLibraryJvmPlugin"
-            version = "indev"
         }
     }
 }
