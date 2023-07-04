@@ -20,7 +20,11 @@ gradlePlugin {
     plugins {
         create("cyan-convention-library-jvm") {
             id = "cyan.convention.library.jvm"
-            implementationClass = "io.github.lexadiky.cyan.ConventionLibraryJvmPlugin"
+            implementationClass = "io.github.lexadiky.cyan.plugin.ConventionLibraryJvmPlugin"
+        }
+        create("cyan-convention-library-multiplatform") {
+            id = "cyan.convention.library.multiplatform"
+            implementationClass = "io.github.lexadiky.cyan.plugin.ConventionLibraryKmpPlugin"
         }
     }
 }

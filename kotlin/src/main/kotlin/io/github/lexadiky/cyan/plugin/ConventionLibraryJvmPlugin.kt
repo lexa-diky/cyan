@@ -1,5 +1,6 @@
-package io.github.lexadiky.cyan
+package io.github.lexadiky.cyan.plugin
 
+import io.github.lexadiky.cyan.Settings
 import io.github.lexadiky.cyan.mixin.TestMixin
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -14,13 +15,9 @@ class ConventionLibraryJvmPlugin : Plugin<Project> {
         target.plugins.apply("org.jetbrains.kotlinx.kover")
 
         target.extensions.configure<KotlinProjectExtension> {
-            jvmToolchain(resolveJvmToolchainVersion(target))
+            jvmToolchain(Settings.jvmToolchainVersion(target))
         }
 
         TestMixin.apply(target, false)
-    }
-
-    private fun resolveJvmToolchainVersion(target: Project): Int {
-        return target.extra["cyan.kotlin.jvm-toolchain"].toString().toInt()
     }
 }
