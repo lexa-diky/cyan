@@ -5,7 +5,7 @@ plugins {
     id 'org.gradle.kotlin.kotlin-dsl' version '3.1.0'
 }
 
-group = 'io.github.lexadiky'
+group = 'io.github.lexadiky.cyan'
 version = '1.0-SNAPSHOT'
 
 repositories {
@@ -32,7 +32,7 @@ gradlePlugin {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId "com.github.lexadiky.cyan"
+            groupId "io.github.lexadiky.cyan"
             artifactId "kotlin"
             version "1.0-SNAPSHOT"
             from components.java
