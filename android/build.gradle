@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     implementation project(":kotlin")
-    implementation 'com.android.application:com.android.application.gradle.plugin:8.2.0-alpha08'
+    implementation 'com.android.application:com.android.application.gradle.plugin:8.2.0-alpha10'
     implementation 'org.jetbrains.kotlin.android:org.jetbrains.kotlin.android.gradle.plugin:1.8.21'
     implementation 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.21'
 }
